@@ -4,7 +4,6 @@
   "private": true,
   "homepage": "https://zip123z.github.io/device_map",
   "dependencies": {
-    // ...existing dependencies...
   },
   "scripts": {
     "start": "react-scripts start",
