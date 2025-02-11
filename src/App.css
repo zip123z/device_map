@@ -1,0 +1,264 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  padding: 20px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+h1 {
+  color: #333;
+}
+
+label {
+  font-size: 1.2em;
+  margin-right: 10px;
+}
+
+select {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+img {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#map {
+  margin-top: 20px;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 30px; /* 調整彈出視窗的padding */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-width: 80%; /* 調整彈出視窗的最大寬度 */
+  max-height: 80%; /* 調整彈出視窗的最大高度 */
+  width: 60%; /* 新增，設定彈出視窗的寬度 */
+  overflow-y: auto;
+}
+
+.modal-content {
+  position: relative;
+}
+
+.modal-content button.link {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.modal-content button.link:hover {
+  background-color: #0056b3;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.device-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: left; /* 新增 */
+  flex-wrap: nowrap; /* 修改為不換行 */
+}
+
+.device-details, .maintenance-history {
+  width: 45%;
+  text-align: left; /* 新增 */
+  background-color: #f0f0f0; /* 新增背景色 */
+  padding: 20px; /* 新增padding */
+  border-radius: 10px; /* 新增邊角 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 新增陰影 */
+}
+
+.maintenance-records {
+  margin-top: 20px;
+}
+
+.maintenance-records ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.maintenance-records li {
+  background-color: #f9f9f9;
+  margin: 15px 0; /* 增加每筆紀錄之間的間距 */
+  padding: 20px; /* 調整每筆紀錄的padding */
+  border-radius: 10px; /* 調整每筆紀錄的邊角 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.maintenance-records li:nth-child(odd) {
+  background-color: #e0f7fa; /* 奇數項背景色 */
+}
+
+.maintenance-records li:nth-child(even) {
+  background-color: #fce4ec; /* 偶數項背景色 */
+}
+
+.maintenance-card {
+  background-color: #f9f9f9;
+  margin: 15px 0; /* 增加每筆紀錄之間的間距 */
+  padding: 20px; /* 調整每筆紀錄的padding */
+  border-radius: 10px; /* 調整每筆紀錄的邊角 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.maintenance-card:nth-child(odd) {
+  background-color: #e0f7fa; /* 奇數項背景色 */
+}
+
+.maintenance-card:nth-child(even) {
+  background-color: #fce4ec; /* 偶數項背景色 */
+}
+
+.link {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: #0056b3;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: left; /* 樣式置左 */
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  text-align: left; /* 樣式置左 */
+}
+
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  label {
+    font-size: 1em;
+  }
+
+  select {
+    width: 100%;
+    padding: 8px;
+    font-size: 0.9em;
+  }
+
+  img {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .device-info {
+    flex-direction: column;
+  }
+
+  .device-details, .maintenance-history {
+    width: 100%;
+    background-color: #f0f0f0; /* 新增背景色 */
+    padding: 20px; /* 新增padding */
+    border-radius: 10px; /* 新增邊角 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 新增陰影 */
+    box-sizing: border-box; /* 確保padding不會超出彈出視窗 */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2em;
+  }
+
+  label {
+    font-size: 0.9em;
+  }
+
+  select {
+    font-size: 0.8em;
+  }
+}
